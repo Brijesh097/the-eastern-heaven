@@ -41,13 +41,13 @@
                         <a class="nav-link" href="">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="menu/menu.html">Menu</a>
+                        <a class="nav-link" href="menu/menu.php">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="team/team.html">Team</a>
+                        <a class="nav-link" href="team/team.php">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact/contact.html">Contact</a>
+                        <a class="nav-link" href="contact/contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#">
@@ -66,24 +66,10 @@
         </div>
     </nav>
     <!-- End Navbar -->
-    <div class="wrapper">
-        <div class="page-header page-header-small">
-            <div class="page-header-image" data-parallax="true" style="background-image: url('assets/img/bg6.jpg');">
-            </div>
-            <div class="container">
-                <div class="content-center">
-                    <h1 class="title">The Eastern Heaven</h1>
-                    <div class="text-center">
-                        <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
-                            <i class="fa fa-facebook-square"></i>
-                        </a>
-                        <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <!-- PHP script to import header -->
+    <?php include('includes/header.php'); ?>
+
         <div class="section section-about-us">
             <div class="container">
                 <hr>
@@ -123,40 +109,19 @@
                         <p style="font-size: 18px;" class="text-muted">Our founder, <strong>Miles</strong>, had an idea to create a restaurant that was more than a place that served great food. <strong>Miles</strong> wanted to give locals a place where they'd always feel at home. A place where they could get no-nonsense food at down-to-earth prices, and where they'd be treated right by people who had a passion to serve.</p>
                     </div>
                 </div>
-                <div class="separator separator-primary"></div>
-                
+                 <div class="separator separator-primary"></div>
+
+                <?php include('includes/php-store-hours/index.php'); ?>
+
+                 <div class="separator separator-primary"></div>
+
             </div>
         </div>
-        <footer class="footer footer-default">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Instagram
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="copyright" style="font-size: 15px;">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>, Designed &amp; Coded by
-                    <a href="#" target="_blank"> &nbsp;BRIJESH</a>.
-                </div>
-            </div>
-        </footer>
+
+        <!-- PHP script to import footer -->
+        <?php include('includes/footer.php'); ?>
+
+
     </div>
 </body>
 <!--   Core JS Files   -->

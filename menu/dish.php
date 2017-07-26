@@ -1,3 +1,14 @@
+<?php 
+    
+    include('../includes/arrays.php');    
+    
+    if (isset($_GET['item'])) {
+        $menuItem = $_GET['item'];
+        $dish = $menuItems[$menuItem];
+    }
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Team | The Eastern Heaven</title>
+    <title>Dish | The Eastern Heaven</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 
@@ -38,16 +49,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="../assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav" style="font-size: 18px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../menu/menu.html">Menu</a>
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="">Team</a>
+                        <a class="nav-link" href="">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../contact/contact.html">Contact</a>
+                        <a class="nav-link" href="../team/team.php">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact/contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#">
@@ -74,7 +85,7 @@
                 <div class="content-center">
                     <h1 class="title">The Eastern Heaven</h1>
                     <div class="text-center">
-                        <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
+                        <a href="#" rel="tooltip" title="Like us on Facebook" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
                             <i class="fa fa-facebook-square"></i>
                         </a>
                         <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
@@ -86,80 +97,31 @@
         </div>
         <div class="section section-about-us">
             <div class="container">
-                <hr><br><br> 
-               <!--  <div class="separator separator-primary" style="margin-top: 0px;"></div> -->
+                <hr><br><br>
                 <center>
-                <h2 class="title">Our Team @ The Eastern Heaven</h2>
-                <!-- <div class="separator separator-primary"></div> -->
-
-                <p style="font-size: 18px;">We are small but mighty. The Eastern Heaven has been a family owned and run business since the dirty thirties, and we're proud of it! When you get these three together, you never know what can happen. But you can count on one thing: <strong>The best food you've ever had. Ever.</strong></p>
-
-                <div class="separator separator-primary"></div>
-                
-                <div class="row">
-
-                <div class="col-lg-4 col-xs-6">
-                        <div class="thumbnail">
-                            <img src="../assets/img/alex.jpg" height="200" width="200" style="border-radius: 50%; margin-top: 15%; margin-bottom: 7%;">
-                            <h3 style="font-size: 23px;"><strong>Miles Heizer</strong></h3>
-                            <p style="font-size: 18px;">Miles is the great-grandson of Brandon Heizer. He is the owner of The Eastern Heaven Restaurant. He cooks a mean Fritatta!</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="thumbnail">
-                            <img src="../assets/img/katherine.jpg" height="200" width="200" style="border-radius: 50%; margin-top: 15%; margin-bottom: 7%;">
-                            <h3 style="font-size: 23px;"><strong>Katherine Langford</strong></h3>
-                            <p style="font-size: 18px;">Katherine knows her stuff. The big sister of Miles himself, she runs the show. Don't miss her Margherita Mondays!</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="thumbnail img-responsive">
-                            <img src="../assets/img/flynn.jpg" height="200" width="200" style="border-radius: 50%; margin-top: 15%; margin-bottom: 7%;">
-                            <h3 style="font-size: 23px;"><strong>Brandon Flynn</strong></h3>
-                            <p style="font-size: 18px;">Brandon is the epitome of the phrase "Don't judge a book by its cover" - you simply cannot find a better chef other than him.</p>
-                        </div>
-                    </div>                 
-
-                </div>
+                    <h2 class="title"><?php echo $dish['title']; ?> &nbsp;-&nbsp; <font class="text-muted"><?php echo $dish['price']; ?></font></h2>
+                    <p style="font-size: 18px;"><?php echo $dish['info']; ?>
+                    <br>
+                    <div class="separator separator-primary"></div>
+                    <strong style="font-size: 25px;">Suggested Beverage :</strong> <strong style="font-size: 27px;" class="text-muted">&nbsp;<?php echo $dish['drink']; ?></strong></p>
                 </center>
-        <!-- <div class="separator separator-primary"></div> -->
-            
-        <br><div class="container" style="margin-bottom: 0px;"><hr></div><br>
-        </div>
-        </div>
-         <footer class="footer footer-default" style="margin-top: 0px;">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Instagram
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="copyright" style="font-size: 15px;">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>, Designed &amp; Coded by
-                    <a href="#" target="_blank"> &nbsp;BRIJESH</a>.
-                </div>
+                <div class="separator separator-primary" style="margin-bottom: 35px;"></div>
+                <center><a href="menu.php"><button class="btn btn-primary" style="font-size: 14px;">BACK TO MENU</button></a></center>
+                
             </div>
-        </footer>
+            <!-- <br><div class="container"><hr></div><br> -->
+            <br>
+            <div class="container" style="margin-bottom: 0px;"><hr></div>
+            <br>
+
+            </div>
+        </div>
+        
+        <!-- PHP script to import footer -->
+        <?php include('../includes/footer.php'); ?>
+
     </div>
+    </body>
 </body>
 <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>

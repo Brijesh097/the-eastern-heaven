@@ -1,3 +1,5 @@
+<?php include('../includes/arrays.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Contact | The Eastern Heaven</title>
+    <title>Menu | The Eastern Heaven</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 
@@ -38,16 +40,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="../assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav" style="font-size: 18px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../menu/menu.html">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../team/team.html">Team</a>
+                        <a class="nav-link" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../team/team.php">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact/contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#">
@@ -74,7 +76,7 @@
                 <div class="content-center">
                     <h1 class="title">The Eastern Heaven</h1>
                     <div class="text-center">
-                        <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
+                        <a href="#" rel="tooltip" title="Like us on Facebook" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
                             <i class="fa fa-facebook-square"></i>
                         </a>
                         <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
@@ -86,82 +88,39 @@
         </div>
         <div class="section section-about-us">
             <div class="container">
-                <hr><br><br> 
-               <!--  <div class="separator separator-primary" style="margin-top: 0px;"></div> -->
+                <hr><br><br>
                 <center>
-                    <h2 class="title">Get in touch with us!</h2>
-                    <div class="text-muted" style="font-size: 18px; margin-bottom: 40px;"><p>Please enter your details down below.</p></div>
-                    </center>
-                    <div class="separator separator-primary" style="margin-bottom: 45px;"></div>
-                    <div class="container" style="width: 86%;">
-                    <form class="form-horizontal">
-                        <div class="form-group" style="margin-bottom: 25px;">
-                            <label for="inputEmail3" class="col-sm-2 control-label text-muted" style="font-size: 16px;"><strong>NAME:</strong></label>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control" id="inputEmail3" placeholder="Enter your name" required="true" style="height: 50px; font-size: 17px;">
-                            </div>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 25px;">
-                            <label for="inputPassword3" class="col-sm-2 control-label text-muted" style="font-size: 16px;"><strong>E-MAIL:</strong></label>
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control" id="inputPassword3" placeholder="Enter your e-mail address" required="true" style="height: 50px; font-size: 17px;">
-                            </div>
-                        </div>
-                        <div class="form-group" style="margin-bottom: 25px;">
-                            <label for="inputPassword3" class="col-sm-2 control-label text-muted" style="font-size: 16px;"><strong>YOUR MESSAGE:</strong></label>
-                            <div class="col-sm-12">
-                                <textarea class="form-control" rows="4" placeholder="Add your message" required="true" style="font-size: 17px;"></textarea>
-                            </div>
-                        </div>
-                        <div class="checkbox" style="margin-left: 15px; margin-top:30px; margin-bottom: 26px;">
-                            <input id="checkbox1" type="checkbox">
-                            <label for="checkbox1" style="font-size: 16px;">
-                                Subscribe to Newsletter
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary" style="font-size: 15px; margin-top: 5px;">SUBMIT</button>
-                            </div>
-                        </div>
-                    </form>
-                    </div>
-                
-        <!-- <div class="separator separator-primary"></div> -->
-            
-        <br><div class="container" style="margin-bottom: 0px;"><hr></div><br>
-        </div>
-        </div>
-         <footer class="footer footer-default" style="margin-top: 0px;">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Instagram
-                            </a>
-                        </li>
+                    <h2 class="title">Our Delicious Menu</h2>
+                    <p style="font-size: 18px;">Our menu is very small - but dang, does it ever pack a punch!<p style="font-size: 18px;" class="text-muted">Click any item to learn about it.</p></p>
+                </center>
+                <div class="separator separator-primary" style="margin-bottom: 4px;"></div>
+                <div style="text-align:center; font-size: 23px;">
+
+                    <ul type="square" style="display: inline-table; margin-top: 15px;">
+                        
+                        <?php foreach ($menuItems as $dish => $item) { ?>
+                            
+                            <li style="margin-top: 10px;"><a href="dish.php?item=<?php echo $dish; ?>"><?php echo $item['title']; ?></a> &nbsp;-&nbsp; <font class="text-muted"><?php echo $item['price']; ?></font></li>
+
+                        <?php } ?>
+
                     </ul>
-                </nav>
-                <div class="copyright" style="font-size: 15px;">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>, Designed &amp; Coded by
-                    <a href="#" target="_blank"> &nbsp;BRIJESH</a>.
+
                 </div>
             </div>
-        </footer>
+            <!-- <br><div class="container"><hr></div><br> -->
+            
+            <div class="separator separator-primary"></div>
+            <br>
+            <div class="container" style="margin-bottom: 0px;"><hr></div>
+            <br>
+
+            </div>
+        </div>
+        
+        <!-- PHP script to import footer -->
+        <?php include('../includes/footer.php'); ?>
+
     </div>
 </body>
 <!--   Core JS Files   -->

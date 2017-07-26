@@ -1,3 +1,5 @@
+<?php include('../includes/arrays.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Menu | The Eastern Heaven</title>
+    <title>Team | The Eastern Heaven</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 
@@ -38,16 +40,16 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="../assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav" style="font-size: 18px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" href="../index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../menu/menu.php">Menu</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="">Menu</a>
+                        <a class="nav-link" href="">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../team/team.html">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../contact/contact.html">Contact</a>
+                        <a class="nav-link" href="../contact/contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#">
@@ -74,7 +76,7 @@
                 <div class="content-center">
                     <h1 class="title">The Eastern Heaven</h1>
                     <div class="text-center">
-                        <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
+                        <a href="#" rel="tooltip" title="Like us on Facebook" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
                             <i class="fa fa-facebook-square"></i>
                         </a>
                         <a href="#" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" class="btn btn-primary btn-icon  btn-icon-mini">
@@ -86,59 +88,53 @@
         </div>
         <div class="section section-about-us">
             <div class="container">
-                <hr><br><br>
+                <hr><br><br> 
+               <!--  <div class="separator separator-primary" style="margin-top: 0px;"></div> -->
                 <center>
-                    <h2 class="title">Our Delicious Menu</h2>
-                    <p style="font-size: 18px;">Our menu is very small - but dang, does it ever pack a punch!<p style="font-size: 18px;" class="text-muted">Click any item to learn about it.</p></p>
-                </center>
-                <div class="separator separator-primary" style="margin-bottom: 4px;"></div>
-                <div style="text-align:center; font-size: 23px;">
-                    <ul type="square" style="display: inline-table; margin-top: 15px;">
-                        <li style="margin-top: 10px;">Club Sandwich &nbsp;-&nbsp; <font class="text-muted">$12</font></li>
-                        <li style="margin-top: 10px; padding-left: 7px;">Lemon &amp; Dill Salmon &nbsp;-&nbsp; <font class="text-muted">$18</font></li>
-                        <li style="margin-top: 10px;">The Super Salad &nbsp;-&nbsp; <font class="text-muted">$34</font></li>
-                        <li style="margin-top: 10px;">Mexican Barbacoa &nbsp;-&nbsp; <font class="text-muted">$23</font></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- <br><div class="container"><hr></div><br> -->
-            
-                <div class="separator separator-primary"></div>
-            
-            <br><div class="container" style="margin-bottom: 0px;"><hr></div><br>
+                <h2 class="title">Our Team @ The Eastern Heaven</h2>
+                <!-- <div class="separator separator-primary"></div> -->
 
-            </div>
-        </div>
-         <footer class="footer footer-default">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Facebook
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Instagram
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="copyright" style="font-size: 15px;">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>, Designed &amp; Coded by
-                    <a href="#" target="_blank"> &nbsp;BRIJESH</a>.
+                <p style="font-size: 18px;">We are small but mighty. The Eastern Heaven has been a family owned and run business since the dirty thirties, and we're proud of it! When you get these three together, you never know what can happen. But you can count on one thing: <strong>The best food you've ever had. Ever.</strong></p>
+
+                <div class="separator separator-primary"></div>
+                
+                <div class="row">
+                    
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="thumbnail">
+                            <img src="../assets/img/alex.jpg" height="200" width="200" style="border-radius: 50%; margin-top: 15%; margin-bottom: 7%;">
+                            <h3 style="font-size: 23px;"><strong><?php echo $members[0]['name']; ?></strong></h3>
+                            <p style="font-size: 18px;"><?php echo $members[0]['bio']; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="thumbnail">
+                            <img src="../assets/img/katherine.jpg" height="200" width="200" style="border-radius: 50%; margin-top: 15%; margin-bottom: 7%;">
+                            <h3 style="font-size: 23px;"><strong><?php echo $members[1]['name']; ?></strong></h3>
+                            <p style="font-size: 18px;"><?php echo $members[1]['bio']; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="thumbnail img-responsive">
+                            <img src="../assets/img/flynn.jpg" height="200" width="200" style="border-radius: 50%; margin-top: 15%; margin-bottom: 7%;">
+                            <h3 style="font-size: 23px;"><strong><?php echo $members[2]['name']; ?></strong></h3>
+                            <p style="font-size: 18px;"><?php echo $members[2]['bio']; ?></p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </footer>
+                </center>
+        <!-- <div class="separator separator-primary"></div> -->
+            
+        <br><div class="container" style="margin-bottom: 0px;"><hr></div><br>
+        </div>
+        </div>
+        
+        <!-- PHP script to import footer -->
+        <?php include('../includes/footer.php'); ?>
+
     </div>
 </body>
 <!--   Core JS Files   -->
