@@ -7,4 +7,4 @@ The Eastern Heaven restaurant created to serve people.
 ## Author:
 Brijesh
 
-<strong>LINK: </strong>(Coming Soon)
+<strong>LINK: </strong>https://brijesh097.github.io/the-eastern-heaven
