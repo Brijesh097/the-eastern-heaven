@@ -42,7 +42,7 @@ Choose what you'd like to output if you're currently open, currently closed, or 
 ~~~ php
 // OPTIONAL
 // Place HTML for output below. This is what will show in the browser.
-// Use {%hours%} shortcode to add dynamic times to your open or closed message.
+// Use {percent_hours_precent} shortcode to add dynamic times to your open or closed message.
 $template = array(
     'open'           => "<h3>Yes, we're open! Today's hours are {%hours%}.</h3>",
     'closed'         => "<h3>Sorry, we're closed. Today's hours are {%hours%}.</h3>",
